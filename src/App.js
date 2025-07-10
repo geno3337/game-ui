@@ -24,7 +24,7 @@ export default function App() {
 
   const connectWebSocket = room =>{
      stompClient = new Client({
-        webSocketFactory: () => new SockJS('http://localhost:4000/ws'),
+        webSocketFactory: () => new SockJS(process.env.REACT_APP_API_URL +'/ws'),
         connectHeaders: {},
         debug: (str) => {
             console.log(str);
