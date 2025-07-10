@@ -15,7 +15,7 @@ export default function GameLoop({ playerId, roomId, stompClient }) {
     const keyMap = {
       ArrowUp: 'MOVE_UP',
       ArrowDown: 'MOVE_DOWN',
-      Enter: 'FIRE',
+      ' ': 'FIRE',
     };
     const action = keyMap[e.key];
     if (action && !pressedKeys.current[e.key]) {
